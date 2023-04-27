@@ -21,13 +21,25 @@ int main(){
     }
   }
   cout<<maxi<<endl;*/
+  // for(int i=0;i<n;i++){
+  //   int sum = 0;
+  //   for(int j=i;j<n;j++){
+  //     sum+=arr[j];
+  //     maxi = max(sum,maxi);
+  //   }
+  // }
+  // cout<<maxi<<endl;
+
+
+  // kadanes algo implement 
   for(int i=0;i<n;i++){
-    int sum = 0;
-    for(int j=i;j<n;j++){
-      sum+=arr[j];
-      maxi = max(sum,maxi);
+    sum+=arr[i];
+    if(maxi<sum){
+      maxi = sum;
     }
+    if(sum<0) sum = 0;
   }
+
   cout<<maxi<<endl;
 return 0;
 }
