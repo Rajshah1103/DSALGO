@@ -39,7 +39,7 @@ void enqueue(struct queue*q, int val)
 int dequeue(struct queue*q){
     int a=-1;
     if(isEmpty(q)){
-        cout<<"The queue is full"<<endl;
+        cout<<"The queue is empty"<<endl;
     }
     else{
         q->f++;
